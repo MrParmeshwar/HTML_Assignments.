@@ -1,0 +1,58 @@
+<!--Create a web form toask the user to enter the following 
+information using the appropriate HTML5 form controls (elements) to represent each item in the list below:-->
+<!--First Name =
+    Last Name=
+    Email Address=
+    Address=
+    City=  
+    Send button to call (trigger) a function name "userForm()",which you will have to create,will take all the 
+    form information (user's input) and display indiv tag. -->
+<!DOCTYPE html>
+<html>
+<head>
+   <script>
+    function print(){
+
+    
+    let ob=document.getElementById('t1')
+    let p1=ob.value
+    let ob2=document.getElementById('t2')
+    let p2=ob2.value
+    let ob3=document.getElementById('t3')
+    let p3=ob3.value
+    let ob4=document.getElementById('t4')
+    let p4=ob4.value
+    let ob5=document.getElementById('t5')
+    let p5=ob5.value
+    let x= p1 + "\n" + p2 +"\n" + p3 + "\n" + p4  + " \n" + p5
+    d1.innerText=x
+    
+    }
+   </script>
+</head>
+<body>
+    <lable>First Name:</lable>
+    &nbsp&nbsp&nbsp&nbsp<input type="text" id="t1">
+    <br>
+    <br>
+    <lable>Last Name:</lable>
+    &nbsp&nbsp&nbsp&nbsp <input type="text" id="t2">
+    <br>
+    <br>
+    <lable>Email Address:</lable>
+    <input type="text" id="t3">
+    <br>
+    <br>
+    <label>Address:</label>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" id="t4">
+    <br>
+    <br>
+    <lable>City:</lable>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" id="t5">
+    <br>
+    <input type="Button" value="Click here" onclick="print()">
+    <div id="d1">
+
+    </div>
+</body>
+</html>

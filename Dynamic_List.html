@@ -1,0 +1,33 @@
+<!--     Implement a functionality in JavaScript that allows the user to enter a language 
+    name in the input field and add it to the ordered list (ol) when the "Add Language" 
+    button is clicked.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+    function Add()
+    {
+        
+        let L=document.getElementById('L1')
+        let ob=document.createElement('li')
+        let R=document.getElementById('t1')
+        ob.innerHTML=R.value;
+        L.appendChild(ob);
+    }
+
+    </script>
+
+</head>
+
+<body>
+    <label>Enter A Language Name:</label>
+    <input type="text" id="t1">
+    <input type="button" value="Add Language" onclick="Add()">
+    <ol id="L1">
+        <li>C</li>
+    </ol>
+</body>
+
+</html>

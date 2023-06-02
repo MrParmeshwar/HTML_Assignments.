@@ -1,0 +1,26 @@
+<!--Write an HTML program that validates user input and displays an appropriate
+         alert message based on whether the input is a number or not.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function checkInput() {
+            var inputValue = document.getElementById('textbox').value;
+
+            if (!isNaN(inputValue) && inputValue !== '') {
+                alert("You have entered a number.");
+            } else {
+                alert("Please enter only a number.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <label>Enter a number:</label>
+    <input type="text" id="textbox">
+    <button onclick="checkInput()">OK</button>
+</body>
+
+</html>

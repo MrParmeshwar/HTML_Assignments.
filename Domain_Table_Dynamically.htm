@@ -1,0 +1,152 @@
+<!-- Create a domain name table dynamically using JavaScript. Implement the functionality to populate the table rows with data. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Create A Domain Name Table Dynamically </title>
+    <script>
+        let arr = []
+        function ok() {
+            let arr1 = [
+                {
+                    TLD: ".com",
+                    Duaration: "1Year",
+                    Registation: "$70.00",
+                    Renewal: "$5.00",
+                    Transfer: "$5.00"
+
+                },
+                {
+                    TLD: ".net",
+                    Duaration: "1Year",
+                    Registation: "$75.00",
+                    Renewal: "$5.00",
+                    Transfer: "$5.00"
+                },
+                {
+                    TLD: ".org",
+                    Duaration: "1Year",
+                    Registation: "$65.00",
+                    Renewal: "$5.00",
+                    Transfer: "$5.00"
+                },
+                {
+                    TLD: ".biz",
+                    Duaration: "1Year",
+                    Registation: "$60.00",
+                    Renewal: "$5.00",
+                    Transfer: "$5.00"
+                },
+                {
+                    TLD: ".info",
+                    Duaration: "1Year",
+                    Registation: "$50.00",
+                    Renewal: "$5.00",
+                    Transfer: "$5.00"
+                },
+                {
+                    TLD: ".info",
+                    Duaration: "1Year",
+                    Registation: "$45.00",
+                    Renewal: "$5.00",
+                    Transfer: "$5.00"
+                },
+
+            ]
+            for (let i = 0; i < arr1.length; i++) {
+                let R = arr1[i]
+                arr.push(R)
+
+            }
+            let T = document.getElementById("T1")
+            let tbody = document.createElement("tbody")
+            for (let j = 0; j < arr1.length; j++) {
+                let P = arr1[j]
+                let R = document.createElement('tr')
+
+                let A = document.createElement('td')
+                A.innerText = P.TLD
+                R.append(A)
+                A = document.createElement('td')
+                A.innerText = P.Duaration
+                R.append(A)
+                A = document.createElement('td')
+                A.innerText = P.Registation
+                R.append(A)
+                A = document.createElement('td')
+                A.innerText = P.Renewal
+                R.append(A)
+                A = document.createElement('td')
+                A.innerText = P.Transfer
+                R.append(A)
+                A = document.createElement('td')
+
+                let ob = document.createElement("input")
+                ob.setAttribute("type", "button")
+                ob.setAttribute("value", "sign Up")
+                A.append(ob)
+                R.append(A)
+                tbody.append(R)
+                T.append(tbody)
+
+            }
+
+        }
+    </script>
+    <style>
+        th {
+            background-color: rgb(153, 153, 238);
+            color: aliceblue;
+            /* padding:5%; */
+            width: 180px;
+            height: 80px;
+            align-items: center;
+
+        }
+
+        table {
+            margin-left: 100px;
+            border-spacing: 0px;
+
+        }
+
+        tbody td:nth-child(odd) {
+            background-color: rgb(227, 214, 214);
+
+        }
+
+        tbody td:nth-child(even) {
+            background-color: whitesmoke;
+
+        }
+
+        td {
+            padding: 30px;
+            text-align: center;
+        }
+
+        input {
+            background-color: rgb(173, 235, 204);
+        }
+    </style>
+</head>
+
+<body>
+    <table id="T1">
+        <caption style="color: crimson;"> <b><i>Create Your Domain Name</i></b></caption>
+
+        <th>TLD</th>
+        <th>Duration</th>
+        <th>Registation </th>
+        <th>Renewal</th>
+        <th>Transfer</th>
+        <th>Register</th>
+
+
+    </table>
+    <br>
+    <input style="margin-left: 100px; color:darkred; background-color: rgb(139, 240, 139);" type="button"
+        value="Create_Tabel" onclick="ok()">
+</body>
+
+</html>

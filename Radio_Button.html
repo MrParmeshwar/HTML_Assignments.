@@ -1,0 +1,56 @@
+<!-- Write the HTML code for a program that dynamically
+ adds language names to a list based on user input and selection. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dynamic Language List Builder.</title>
+    <script>
+     
+        function Change()
+        {
+            let A=document.getElementById('t1')
+            let A1=A.value
+            let s1=document.getElementById('L1')
+            let li=document.createElement('li')
+            li.innerText=A1
+            if(result=='char')
+            {
+                s1.setAttribute("type","A")
+
+            }
+            s1.append(li)
+        }
+        function radioclick1()
+        {
+            result='number'
+        }
+        function radionclick2()
+        {
+            result='char'
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <input type="radio" name="Select" id="r1" onclick="radioclick1()">
+    <lable>Number</lable><br>
+    <input type="radio" name="Select" id="r2" onclick="radionclick2()">
+    <lable>Charecters</lable><br>
+    <input type="button" value="Add Course" onclick="Change()"> <br>
+    <label>Enter A Language Name:</label>
+    <input type="text" id="t1">
+  
+   
+    <ol id="L1">
+     
+
+    </ol>
+
+</body>
+
+</html>

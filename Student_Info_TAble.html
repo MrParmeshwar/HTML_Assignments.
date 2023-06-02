@@ -1,0 +1,144 @@
+<!-- Create an HTML page with a student information table. The table should have fields for Name, Surname, Email, Phone No., and Gender. 
+    Include an input button labeled "Submit" at the bottom of the table And Show The Data In Unother Table -->
+<!-- Create A one Table and show the table data in unother div tag-->
+<html>
+
+<head>
+    <title>
+        Student Information Table
+    </title>
+    <style>
+        p {
+            color: brown;
+        }
+
+        /* div {
+            color: red;
+            background-color: rgb(119, 240, 204);
+            width: 250px;
+            margin-left: 520px;
+        } */
+        table {
+            background-color: rgb(200, 235, 168);
+            border-color: rgb(105, 2, 2);
+            border-style: groove;
+            color: red;
+        }
+
+        th {
+            color: red;
+        }
+    </style>
+    <script>
+        let result = 'male'
+        function Ok() {
+
+
+            let P = document.getElementById('T1')
+            let P1 = P.value
+            let Q = document.getElementById('T2')
+            let Q1 = Q.value
+            let R = document.getElementById('T3')
+            let R1 = R.value
+            let S = document.getElementById('T4')
+            let S1 = S.value
+            let T = document.getElementById('R1')
+            let T1 = T.value
+            let U = document.getElementById('R2')
+            let U1 = U.value
+            //  Z = P1 + "\n" + Q1 + "\n" + R1 + "\n" + S1 + "\n"
+            //  d1.innerText = Z
+            let r = document.createElement('tr')
+            let c1 = document.createElement('td')
+            let c2 = document.createElement('td')
+            let c3 = document.createElement('td')
+            let c4 = document.createElement('td')
+            let c5 = document.createElement('td')
+            c1.innerText = P1
+            c2.innerText = Q1
+            c3.innerText = R1
+            c4.innerText = S1
+
+            r.append(c1)
+            r.append(c2)
+            r.append(c3)
+            r.append(c4)
+            r.append(c5)
+            d1.append(r)
+            P.value = ""
+            Q.value = ""
+            R.value = ""
+            S.value = ""
+
+            if (result == 'male') {
+                c5.innerText = T1
+
+            }
+            else {
+                c5.innerText = U1
+
+            }
+        }
+        function P() {
+            result = 'male'
+
+        }
+        function R() {
+            result = 'female'
+        }
+    </script>
+</head>
+
+<body>
+    <p align="center">Below Is The Student Information Table👇👇. <br>
+    </p>
+    => <table border="5" style="border-color:brown; background-color: rgb(219, 135, 79);" align="center">
+        <th colspan="2" style="background-color: aqua;">Student Information </th>
+        <tr>
+            <td>Name</td>
+            <td><input type="Text" id="T1" required> </td>
+
+        </tr>
+        <tr>
+            <td>SurName</td>
+            <td><input type="Text" id="T2" required> </td>
+
+        </tr>
+        <tr>
+            <td>E-Mail</td>
+            <td><input type="email" id="T3" required> </td>
+
+        </tr>
+        <tr>
+            <td>Phone No.</td>
+            <td><input type="Text" id="T4" required> </td>
+
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><input type="Radio" Name="Gender" value="Male" id="R1" onclick="P()"><label>Male</label> <input
+                    type="Radio" id="R2" Value="Female" Name="Gender" onclick="R()"><label>Female</label></label></td>
+
+        </tr>
+        <tr>
+            <td> <input type="Button" aria-colspan="2" Value="Submit" onclick="Ok()"
+                    style="background-color: rgb(46, 131, 46);"> </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <p align="center">
+        You Have Enter Following Information.
+    </p>
+
+    <table id="d1" border="3" align="center">
+        <tr>
+            <td style="color:rgb(112, 3, 18)">Name</td>
+            <td style="color:rgb(112, 3, 18)">Surname</td>
+            <td style="color:rgb(112, 3, 18)">Email</td>
+            <td style="color:rgb(112, 3, 18)">Phone_No.</td>
+            <td style="color:rgb(112, 3, 18)">Gender</td>
+    </table>
+</body>
+
+</html>

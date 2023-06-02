@@ -1,0 +1,38 @@
+<!-- Write a JavaScript function that creates and appends a paragraph element to the body of an HTML document.
+     The paragraph should have the text "This is First Paragraph" and a background color of red. Implement another
+      function that creates and appends a second paragraph element with the text "This is Second Paragraph" and a 
+      background color of black. Finally, add two buttons to the HTML document: one for creating the first paragraph 
+      and another for creating the second paragraph. When the buttons are clicked, the corresponding paragraphs should 
+      be added to the body of the document. -->
+<!--Write a Javascript code to add Paragraph dynamically-->
+<html>
+    <head>
+        <script>
+            function create(){
+                let P1=document.createElement('p')
+                P1.innerText="This is First Paragraph"
+               P1.style.color="purple"
+               P1.style.backgroundColor="red"
+                document.body.append(P1)
+                document.body.style.backgroundColor="#D3D3D3"
+            }
+        function create1(){
+            let P2=document.createElement('p')
+            P2.innerText="This is Second Paragraph"
+            P2.style.backgroundColor="black"
+            P2.style.color="red"
+            document.body.append(P2)
+            document.body.style.backgroundColor="#D3D3D3"
+        }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="Create First Paragraph" onclick="create()">
+        <br>
+        <br>
+        <input type="button" value="Create Second Paragraph" onclick="create1()">
+        <br>
+        <br>
+
+    </body>
+</html>
